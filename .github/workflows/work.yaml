@@ -1,12 +1,10 @@
 name: JD_Sign_Action-Fate
 
 on:
-  repository_dispatch:
-  release:
-    types: published
-  # push:
-  #   branches:
-  #     - master
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
   schedule:
     - cron: 0 20 * * *
   watch:
